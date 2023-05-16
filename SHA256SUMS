@@ -1,0 +1,5 @@
+a0490242241dece8d2245bda118c78aa9da42a5232c3325e4e814402a0929a26 *ubuntu-mantic-core-cloudimg-amd64-root.tar.gz
+a798c86e38ca140619cfd9302b9d5a358d96cbaaf3b75d14ee6aa4f02e29c9ba *ubuntu-mantic-core-cloudimg-arm64-root.tar.gz
+9fbe80960aebe045928eb096a3d698877061ae782319762cb025991945dd11b8 *ubuntu-mantic-core-cloudimg-armhf-root.tar.gz
+5573cdb68871ad0e8a68b8f265654bf35ae74d9ad5ae8368240a897287c80583 *ubuntu-mantic-core-cloudimg-ppc64el-root.tar.gz
+768ccbe9f245a3ab00605e01110a96091537fab6055419b39cd0796eaae1ea13 *ubuntu-mantic-core-cloudimg-s390x-root.tar.gz
