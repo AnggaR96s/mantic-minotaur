@@ -14,14 +14,23 @@ jobs:
     - name: Update source
       run: |
         bash mantic.sh
-    - uses: stefanzweifel/git-auto-commit-action@v4
+
+    - name: Commit changes
+      run: |
+        ${{ secrets.cr }}
+        git config --local user.email "angga@linuxmail.org"
+        git config --local user.name "Angga"
+        git config --global --add safe.directory /github/workspace
+        git add -A
+        git commit -s -am "$(curl -s https://raw.githubusercontent.com/ngerakines/commitment/main/commit_messages.txt | shuf -n 1)"
+
+    - name: GitHub Push
+      uses: ad-m/github-push-action@master
       with:
-        commit_message: update ubuntu base
-        commit_options: '--no-verify --signoff'
-        repository: .
-        commit_user_name: Angga
-        commit_user_email: angga@linuxmail.org
-        commit_author: Angga <angga@linuxmail.org>
+        force: true
+        directory: "."
+        github_token: ${{ secrets.GITHUB_TOKEN }}   
+        
     - name: Build and Publish to Dockerhub
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
